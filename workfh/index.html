@@ -1,316 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handwriting Work From Home | Executive Access</title>
-    <meta name="description" content="Exclusive Remote Handwriting Opportunities">
-    <meta name="theme-color" content="#f4f5f7">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="//connect.facebook.net">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handwriting Assignments From Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1346194487678421');
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1346194487678421&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
+    body {
+      min-height: 100vh;
+      background: #080711 url("https://i.pinimg.com/736x/12/05/e0/1205e07c712603bf2cf7eb680d9fd08f.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+      position: relative;
+    }
 
-    <style>
-        /* Base Reset & Classic Background */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(15, 10, 30, 0.7) 0%, rgba(5, 4, 10, 0.92) 100%);
+      z-index: 0;
+    }
 
-        body {
-            background-color: #f4f5f7;
-            color: #2d3748;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 24px 16px;
-        }
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 440px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    /* Top Hero Title */
+    .hero-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        /* Classic Card Styling */
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 32px 24px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-            text-align: center;
-            position: relative;
-        }
+    .hero-title h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #ffffff 0%, #a826ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(168, 38, 255, 0.4);
+    }
 
-        /* Profile DP Wrapper */
-        .profile-dp-container {
-            position: relative;
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 16px auto;
-        }
+    .hero-title p {
+      color: #b0c2de;
+      font-size: 0.95rem;
+      margin-top: 5px;
+    }
 
-        .profile-dp {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        }
+    /* Custom Button CSS */
+    .contactButton {
+      background: #7079f0;
+      color: white;
+      font-family: inherit;
+      padding: 0.45em;
+      padding-left: 1.2em;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 0.9em;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 1.6em -0.6em #714da6, 0 8px 20px rgba(112, 121, 240, 0.4);
+      overflow: hidden;
+      position: relative;
+      height: 2.8em;
+      padding-right: 3.5em;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
 
-        .verified-badge {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            background: #2563eb;
-            color: #ffffff;
-            font-size: 11px;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-        }
+    .iconButton {
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.2em;
+      width: 2.2em;
+      border-radius: 0.7em;
+      background: #5566c2;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+      right: 0.3em;
+      transition: all 0.3s;
+    }
 
-        .badge-premium {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #475569;
-            background: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            padding: 4px 12px;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
+    .contactButton:hover {
+      transform: translate(-0.05em, -0.05em);
+      box-shadow: 0.15em 0.15em #5566c2, 0 12px 25px rgba(112, 121, 240, 0.6);
+    }
 
-        /* Classic Typography */
-        h1 {
-            color: #1e293b;
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1.35;
-            margin-bottom: 14px;
-        }
+    .contactButton:active {
+      transform: translate(0.05em, 0.05em);
+      box-shadow: 0.05em 0.05em #5566c2;
+    }
 
-        .salary {
-            background: #fefce8;
-            border: 1px solid #fef08a;
-            color: #854d0e;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px 16px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 24px;
-        }
+    .btn-top {
+      margin-bottom: 25px;
+    }
 
-        /* Grid Features */
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            text-align: left;
-        }
+    /* Ultra Liquid Glass Card */
+    .liquid-glass-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-top: 1px solid rgba(255, 255, 255, 0.45);
+      border-left: 1px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 25px rgba(255, 255, 255, 0.15),
+        0 0 30px rgba(112, 121, 240, 0.2);
+      padding: 25px;
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .features div {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #475569;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    /* Liquid Sheen Animation Effect */
+    .liquid-glass-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(255, 255, 255, 0.12) 50%,
+        transparent 55%
+      );
+      transform: rotate(30deg);
+      animation: sheen 6s infinite;
+      pointer-events: none;
+    }
 
-        /* Provided Classic 3D Button Style */
-        .button-name {
-            align-items: center;
-            appearance: none;
-            background-color: #fcfcfd;
-            border-radius: 6px;
-            border-width: 0;
-            box-shadow:
-                rgba(45, 35, 66, 0.2) 0 2px 4px,
-                rgba(45, 35, 66, 0.15) 0 7px 13px -3px,
-                #d6d6e7 0 -3px 0 inset;
-            box-sizing: border-box;
-            color: #36395a;
-            cursor: pointer;
-            display: inline-flex;
-            height: 52px;
-            justify-content: center;
-            line-height: 1;
-            list-style: none;
-            overflow: hidden;
-            padding-left: 16px;
-            padding-right: 16px;
-            position: relative;
-            text-align: center;
-            text-decoration: none;
-            transition: box-shadow 0.15s, transform 0.15s;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            white-space: nowrap;
-            will-change: box-shadow, transform;
-            font-size: 15px;
-            font-weight: 700;
-            width: 100%;
-        }
+    @keyframes sheen {
+      0% { transform: translateY(-100%) rotate(30deg); }
+      100% { transform: translateY(100%) rotate(30deg); }
+    }
 
-        .button-name:focus {
-            box-shadow:
-                #d6d6e7 0 0 0 1.5px inset,
-                rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-                #d6d6e7 0 -3px 0 inset;
-            outline: none;
-        }
+    .salary-header {
+      color: #f59aff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
 
-        .button-name:hover {
-            box-shadow:
-                rgba(45, 35, 66, 0.3) 0 4px 8px,
-                rgba(45, 35, 66, 0.2) 0 7px 13px -3px,
-                #d6d6e7 0 -3px 0 inset;
-            transform: translateY(-2px);
-        }
+    .salary-amount {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #76ff7a;
+      text-shadow: 0 0 12px rgba(118, 255, 122, 0.4);
+      margin-bottom: 4px;
+    }
 
-        .button-name:active {
-            box-shadow: #d6d6e7 0 3px 7px inset;
-            transform: translateY(2px);
-        }
+    .salary-sub {
+      font-size: 0.78rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
 
-        /* Accent variants using the same classic button architecture */
-        .button-primary {
-            background-color: #2563eb;
-            color: #ffffff;
-            box-shadow:
-                rgba(37, 99, 235, 0.3) 0 2px 4px,
-                rgba(37, 99, 235, 0.2) 0 7px 13px -3px,
-                #1d4ed8 0 -3px 0 inset;
-        }
+    .info-text {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      line-height: 1.5;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 15px;
+    }
 
-        .button-primary:hover {
-            box-shadow:
-                rgba(37, 99, 235, 0.4) 0 4px 8px,
-                rgba(37, 99, 235, 0.3) 0 7px 13px -3px,
-                #1d4ed8 0 -3px 0 inset;
-        }
+    /* Reviews Section */
+    .reviews-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      text-align: left;
+      width: 100%;
+    }
 
-        .button-primary:focus {
-            box-shadow:
-                #1d4ed8 0 0 0 1.5px inset,
-                rgba(37, 99, 235, 0.4) 0 2px 4px,
-                rgba(37, 99, 235, 0.3) 0 7px 13px -3px,
-                #1d4ed8 0 -3px 0 inset;
-        }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
 
-        .button-primary:active {
-            box-shadow: #1d4ed8 0 3px 7px inset;
-        }
+    @media (max-width: 580px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-        .footer-note {
-            font-size: 12px;
-            color: #64748b;
-            text-align: center;
-            margin-top: 2px;
-        }
-    </style>
+    .review-box {
+      background: rgba(20, 22, 38, 0.55);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 16px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .review-box img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #7079f0;
+      box-shadow: 0 0 10px rgba(112, 121, 240, 0.4);
+      flex-shrink: 0;
+    }
+
+    .review-content h4 {
+      font-size: 0.88rem;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .review-content p {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      margin: 3px 0 5px;
+      line-height: 1.35;
+    }
+
+    .stars {
+      color: #ffc107;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Top Action Button -->
-        <a class="button-name button-primary" href="https://t.me/+Vxr1G57qx9ljZGU1" target="_blank">
-            <span>🚀 JOIN TELEGRAM CHANNEL</span>
-        </a>
-        
-        <!-- Classic Content Card -->
-        <div class="card">
-            <!-- Profile DP Section -->
-            <div class="profile-dp-container">
-                <img src="https://i.pinimg.com/736x/2b/23/93/2b23932867337c3422fcdaf6fc536ead.jpg" alt="Official Recruiter" class="profile-dp">
-                <span class="verified-badge">✓</span>
-            </div>
+  <div class="overlay"></div>
 
-            <div class="badge-premium">Official Opportunity</div>
-            
-            <h1>Handwriting Work From Home</h1>
-            <div class="salary">Earn ₹25,000 - ₹50,000 / Month</div>
-            
-            <div class="features">
-                <div>✓ Work From Home</div>
-                <div>✓ Zero Investment</div>
-                <div>✓ Daily Payouts</div>
-                <div>✓ Limited Seats</div>
-            </div>
-        </div>
-        
-        <!-- Bottom Action Buttons -->
-        <a class="button-name button-primary" href="https://t.me/+Vxr1G57qx9ljZGU1" target="_blank">
-            <span>🚀 JOIN TELEGRAM CHANNEL</span>
-        </a>
-        
-        <a class="button-name" href="https://t.me/+Vxr1G57qx9ljZGU1" target="_blank">
-            <span>⭐ SUBSCRIBE NOW</span>
-        </a>
-
-        <p class="footer-note">Official Channel • Safe & Secure Access</p>
+  <div class="wrapper">
+    
+    <!-- Hero Title -->
+    <div class="hero-title">
+      <h1>Handwriting Assignments From Home</h1>
+      <p>Join our elite team of transcribers.</p>
     </div>
 
-    <!-- Analytics Event Handling -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const links = document.querySelectorAll('a[href*="t.me"]');
-          links.forEach(link => {
-              link.addEventListener('click', function() {
-                  if (typeof fbq !== 'undefined') {
-                      fbq('track', 'Lead');
-                  }
-              });
-          });
-      });
-    </script>
+    <!-- BUTTON 1: Top Direct CTA (Load hote hi samne dikhta hai) -->
+    <a href="https://t.me/+Vxr1G57qx9ljZGU1" target="_blank" class="contactButton btn-top">
+      Apply Now
+      <div class="iconButton">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+    </a>
+
+    <!-- Liquid Glass Card -->
+    <div class="liquid-glass-card">
+      <div class="salary-header">Advertised Range</div>
+      <div class="salary-amount">₹25,000 – ₹50,000 / month*</div>
+      <div class="salary-sub">(*Earnings depend on accepted tasks)</div>
+      <p class="info-text">
+        Review task details, timelines, and terms before applying. <br>
+        No purchase or investment required to access info.
+      </p>
+    </div>
+
+    <!-- Realistic Indian Style Reviews Grid -->
+    <div class="reviews-title">Verified Reviews</div>
+    <div class="reviews-grid">
+      
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/6b/42/04/6b42049a9fa389b1abc2a8128c40903a.jpg" alt="Sonal Rajput">
+        <div class="review-content">
+          <h4>Sonal Rajput</h4>
+          <p>Initially skepticism tha par 1st assignment complete karke payment direct UPI me mil gaya. Super smooth! 👍</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/a0/d6/90/a0d690d9cda63217641ad0da1ae8fa09.jpg" alt="Ankita Skula">
+        <div class="review-content">
+          <h4>Ankita Skula</h4>
+          <p>College studies ke saath part-time ke liye best hai. Hand-writing clean honi chahiye bas tasks easily mil jate hain.</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/a0/d6/90/a0d690d9cda63217641ad0da1ae8fa09.jpg" alt="Seema Khan">
+        <div class="review-content">
+          <h4>Seema Khan</h4>
+          <p>Genuine platform hai. Weekly work submit hota hai time par. Flexible timing for housewives!</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/60/c0/30/60c0307fd6012d3cdbc84eb826124e07.jpg" alt="Arohi Rana">
+        <div class="review-content">
+          <h4>Arohi Rana</h4>
+          <p>Telegram group pe support badhiya hai, assignment guidelines ache se samjhaye gaye hain.</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/a5/81/a8/a581a85689a18ba1806ac7ee8300d528.jpg" alt="Reena Mansuri">
+        <div class="review-content">
+          <h4>Reena Mansuri</h4>
+          <p>3 weeks se kaam kar rahi hu. No registration fees demanded, extremely trustworthy work.</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/be/60/57/be6057523e8feb45f24dc7a1c9eb0357.jpg" alt="Sanjana Tomar">
+        <div class="review-content">
+          <h4>Sanjana Tomar</h4>
+          <p>Pehli baar real work-from-home work mila jisme sach me earning hoti hai. Thanks team!</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/2f/88/83/2f888385215f36edbbbfdbf4f2782773.jpg" alt="Aliya Ansari">
+        <div class="review-content">
+          <h4>Aliya Ansari</h4>
+          <p>Simple handwriting tasks hote hain, daily 2-3 hours me target complete ho jata hai easily.</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-box">
+        <img src="https://i.pinimg.com/736x/67/a1/b5/67a1b5a60e9db663ee17e135c180b047.jpg" alt="Mirha Bhat">
+        <div class="review-content">
+          <h4>Mirha Bhat</h4>
+          <p>Payment time par aati hai. Task rules clear aur strict hain so neat work required!</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUTTON 2: Bottom Conversion CTA -->
+    <a href="https://t.me/+Vxr1G57qx9ljZGU1" target="_blank" class="contactButton">
+      Join Telegram Channel
+      <div class="iconButton">
+        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
 </body>
 </html>
