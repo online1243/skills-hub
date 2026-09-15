@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capability Assessment Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0b0c10;
+      color: #e0e6ed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 15px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: #12141d;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input[type="number"], textarea {
+      width: 100%;
+      background: #1a1d29;
+      border: 1px solid #2d3245;
+      border-radius: 8px;
+      padding: 12px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus, textarea:focus {
+      border-color: #6366f1;
+    }
+
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      background: #1a1d29;
+      border: 1px solid #2d3245;
+      color: #e2e8f0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .option-btn:hover {
+      background: #242838;
+      border-color: #4f46e5;
+    }
+
+    .option-btn.selected {
+      background: #312e81;
+      border-color: #6366f1;
+      color: #ffffff;
+    }
+
+    .btn-next {
+      width: 100%;
+      background: #4f46e5;
+      color: #ffffff;
+      border: none;
+      padding: 13px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.2s;
+    }
+
+    .btn-next:hover {
+      background: #4338ca;
+    }
+
+    .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .timer-badge {
+      display: inline-block;
+      background: #ef4444;
+      color: #fff;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .paragraph-card {
+      background: #1e2330;
+      border: 1px dashed #6366f1;
+      padding: 15px;
+      border-radius: 8px;
+      color: #f1f5f9;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- STEP 1: Basic Info -->
+    <div class="step active" id="step-1">
+      <h2>Tell us about yourself</h2>
+      <p class="subtitle">Share your details to help us customize opportunities for you.</p>
+
+      <div class="form-group">
+        <label>Your Age</label>
+        <input type="number" id="age-input" placeholder="e.g. 21" min="10" max="80">
+      </div>
+
+      <div class="form-group">
+        <label>Interest In</label>
+        <div class="options-grid" id="interest-options">
+          <button class="option-btn" onclick="selectSingle(this, 'interest')">Job Part-Time Work</button>
+          <button class="option-btn" onclick="selectSingle(this, 'interest')">Skills Work Hardcore</button>
+          <button class="option-btn" onclick="selectSingle(this, 'interest')">Entrepreneurship</button>
+        </div>
+      </div>
+
+      <button class="btn-next" onclick="nextStep(2)">Continue</button>
+    </div>
+
+    <!-- STEP 2: Nature -->
+    <div class="step" id="step-2">
+      <h2>What is your nature?</h2>
+      <p class="subtitle">Select the personality type that fits you best.</p>
+
+      <div class="form-group">
+        <div class="options-grid" id="nature-options">
+          <button class="option-btn" onclick="selectSingle(this, 'nature')">Soft and Simple</button>
+          <button class="option-btn" onclick="selectSingle(this, 'nature')">Logical and Problem Solver</button>
+          <button class="option-btn" onclick="selectSingle(this, 'nature')">Aggressive</button>
+        </div>
+      </div>
+
+      <button class="btn-next" onclick="nextStep(3)">Proceed to Capability Test</button>
+    </div>
+
+    <!-- STEP 3: Test Instruction -->
+    <div class="step" id="step-3">
+      <h2>Capability Check</h2>
+      <div class="alert-box">
+        ⚠️ We're checking your capability!
+      </div>
+      <p class="subtitle">Now we show you a paragraph for 5 seconds. Recognize it and type the exact same text in the input box on the next screen.</p>
+
+      <button class="btn-next" onclick="startTest()">Start Test</button>
+    </div>
+
+    <!-- STEP 4: 5-Second Flash Paragraph -->
+    <div class="step" id="step-4">
+      <h2>Memory Flash <span class="timer-badge" id="timer">5s</span></h2>
+      <p class="subtitle">Memorize this text before time runs out:</p>
+
+      <div class="paragraph-card" id="target-paragraph">
+        i am a girl who want to be successful just like a entrepreneur but i know entrepreneur never do job and i dont know why i'm here
+      </div>
+    </div>
+
+    <!-- STEP 5: Typing Input -->
+    <div class="step" id="step-5">
+      <h2>Type the Paragraph</h2>
+      <p class="subtitle">Type the exact same text you saw on the previous screen.</p>
+
+      <div class="form-group">
+        <textarea id="user-typed-input" rows="4" placeholder="Start typing here..."></textarea>
+      </div>
+
+      <button class="btn-next" onclick="verifyAndRedirect()">Submit Answer</button>
+    </div>
+
+  </div>
+
+  <script>
+    const targetText = "i am a girl who want to be successful just like a entrepreneur but i know entrepreneur never do job and i dont know why i'm here";
+    let selectedInterest = "";
+    let selectedNature = "";
+
+    function selectSingle(element, group) {
+      const parent = element.parentElement;
+      const buttons = parent.querySelectorAll('.option-btn');
+      buttons.forEach(btn => btn.classList.remove('selected'));
+      element.classList.add('selected');
+
+      if (group === 'interest') selectedInterest = element.innerText;
+      if (group === 'nature') selectedNature = element.innerText;
+    }
+
+    function nextStep(stepNumber) {
+      if (stepNumber === 2) {
+        const age = document.getElementById('age-input').value;
+        if (!age || !selectedInterest) {
+          alert('Please enter your age and select an interest.');
+          return;
+        }
+      }
+      if (stepNumber === 3) {
+        if (!selectedNature) {
+          alert('Please select your nature.');
+          return;
+        }
+      }
+
+      document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+      document.getElementById(`step-${stepNumber}`).classList.add('active');
+    }
+
+    function startTest() {
+      nextStep(4);
+      let timeLeft = 5;
+      const timerDisplay = document.getElementById('timer');
+
+      const countdown = setInterval(() => {
+        timeLeft--;
+        timerDisplay.innerText = `${timeLeft}s`;
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          nextStep(5);
+        }
+      }, 1000);
+    }
+
+    // Levenshtein distance algorithm to calculate similarity accuracy
+    function calculateAccuracy(s1, s2) {
+      const cleanS1 = s1.trim().toLowerCase().replace(/\s+/g, ' ');
+      const cleanS2 = s2.trim().toLowerCase().replace(/\s+/g, ' ');
+
+      if (cleanS1 === cleanS2) return 100;
+
+      const track = Array(cleanS2.length + 1).fill(null).map(() =>
+        Array(cleanS1.length + 1).fill(null));
+      for (let i = 0; i <= cleanS1.length; i += 1) track[0][i] = i;
+      for (let j = 0; j <= cleanS2.length; j += 1) track[j][0] = j;
+
+      for (let j = 1; j <= cleanS2.length; j += 1) {
+        for (let i = 1; i <= cleanS1.length; i += 1) {
+          const indicator = cleanS1[i - 1] === cleanS2[j - 1] ? 0 : 1;
+          track[j][i] = Math.min(
+            track[j][i - 1] + 1,
+            track[j - 1][i] + 1,
+            track[j - 1][i - 1] + indicator,
+          );
+        }
+      }
+
+      const distance = track[cleanS2.length][cleanS1.length];
+      const maxLength = Math.max(cleanS1.length, cleanS2.length);
+      return ((maxLength - distance) / maxLength) * 100;
+    }
+
+    function verifyAndRedirect() {
+      const userInput = document.getElementById('user-typed-input').value;
+      const accuracy = calculateAccuracy(userInput, targetText);
+
+      if (accuracy >= 95) {
+        // Passed test (>95% accuracy)
+        window.location.href = "https://t.me/quicklygrow?text=hi%20...%20i%20passed%20your%20test";
+      } else {
+        // Failed test (<95% accuracy)
+        window.location.href = "https://t.me/+Vxr1G57qx9ljZGU1";
+      }
+    }
+  </script>
+</body>
+</html>
